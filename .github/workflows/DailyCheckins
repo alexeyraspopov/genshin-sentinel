@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Daily Check-ins
+
+on:
+  schedule:
+    - cron: "0 */24 * * *"
+
+jobs:
+  checkin:
+    runs-on: macos-latest
+    
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: 0
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+  
+      - name: Check
+        run: echo "Hello World"
