@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  checkin:
+  soul-checkin:
     runs-on: ubuntu-latest
     
     env:
@@ -23,3 +23,5 @@ jobs:
   
       - name: Check
         run: echo "Hello World"
+        env:
+          MIHOYO_COOKIE: ${{ secrets.SOUL_MIHOYO_COOKIE }}
