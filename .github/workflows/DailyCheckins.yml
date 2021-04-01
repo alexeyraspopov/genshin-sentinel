@@ -9,7 +9,7 @@ on:
 
 jobs:
   checkin:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     
     env:
       PLAYWRIGHT_BROWSERS_PATH: 0
