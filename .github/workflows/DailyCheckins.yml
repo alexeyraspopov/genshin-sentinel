@@ -4,13 +4,13 @@ name: Daily Check-ins
 
 on:
   schedule:
-    - cron: "5 16 */1 * *"
+    - cron: '5 16 */1 * *'
   workflow_dispatch:
 
 jobs:
   soul-checkin:
     runs-on: ubuntu-latest
-    
+
     env:
       PLAYWRIGHT_BROWSERS_PATH: 0
 
@@ -20,8 +20,11 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14.x
-  
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Check
-        run: echo "Hello World"
+        run: npm run checkin
         env:
           MIHOYO_COOKIE: ${{ secrets.SOUL_MIHOYO_COOKIE }}
