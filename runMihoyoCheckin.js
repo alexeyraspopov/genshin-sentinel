@@ -20,7 +20,7 @@ let pairs = [
 ];
 
 (async () => {
-  let browser = await chromium.launch({ headless: false });
+  let browser = await chromium.launch({ headless: true });
   let context = await browser.newContext();
   context.addCookies(pairs);
   let page = await context.newPage();
