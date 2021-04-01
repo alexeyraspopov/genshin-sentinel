@@ -30,9 +30,10 @@ let pairs = [
   await page.waitForTimeout(5000);
   let items = await page.$$('[class^="components-home-assets-__sign-content_---item---"]');
   let received = await page.$$('[class^="components-home-assets-__sign-content_---received---"]');
-  console.log('Items received', received.length);
+  console.log('Items already received', received.length);
   let nextItem = items[received.length];
   await nextItem.click();
+  console.log('One more item clicked');
   await page.waitForTimeout(5000);
   await browser.close();
 })();
