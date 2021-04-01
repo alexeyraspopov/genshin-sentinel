@@ -1,18 +1,16 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Daily Check-ins
+name: Mihoyo Daily Check-ins
 
 on:
   schedule:
     - cron: '10 16 * * *'
   workflow_dispatch:
 
+env:
+  PLAYWRIGHT_BROWSERS_PATH: 0
+
 jobs:
   soul-checkin:
     runs-on: ubuntu-latest
-
-    env:
-      PLAYWRIGHT_BROWSERS_PATH: 0
 
     steps:
       - uses: actions/checkout@v2
