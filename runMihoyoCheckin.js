@@ -16,7 +16,6 @@ let pairs = [
   { name: 'cookie_token', value: parsed.cookie_token, ...mihoyoDomainCookie },
   { name: 'ltoken', value: parsed.ltoken, ...mihoyoDomainCookie },
   { name: 'ltuid', value: parsed.ltuid, ...mihoyoDomainCookie },
-  { name: 'mi18nLang', value: parsed.mi18nLang, ...mihoyoDomainCookie },
 ];
 
 (async () => {
