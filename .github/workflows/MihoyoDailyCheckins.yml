@@ -23,6 +23,6 @@ jobs:
         run: npm install
 
       - name: Check
-        run: npm run checkin
+        run: node runMihoyoCheckin.js
         env:
           MIHOYO_COOKIE: ${{ secrets.SOUL_MIHOYO_COOKIE }}
