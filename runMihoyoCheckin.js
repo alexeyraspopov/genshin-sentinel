@@ -14,8 +14,8 @@ let pairs = [
   { name: '_MHYUUID', value: parsed._MHYUUID, ...mihoyoDomainCookie },
   { name: 'account_id', value: parsed.account_id, ...mihoyoDomainCookie },
   { name: 'cookie_token', value: parsed.cookie_token, ...mihoyoDomainCookie },
-  { name: 'ltoken', value: parsed.ltoken, ...mihoyoDomainCookie },
-  { name: 'ltuid', value: parsed.ltuid, ...mihoyoDomainCookie },
+  { name: 'ltoken', value: parsed.ltoken, ...mihoyoDomainCookie, secure: true },
+  { name: 'ltuid', value: parsed.ltuid, ...mihoyoDomainCookie, secure: true },
 ];
 
 (async () => {
